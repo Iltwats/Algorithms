@@ -1,12 +1,12 @@
 #include<stdio.h>
-#include<stdbool.h>
+#include<stdbool.h> //To take boolean value
 
 void sieve_of_eratosthenes(int n)
 {
     //take a boolean array to store which index is a prime number.
     bool prime[n + 1];
 
-    // make all the cells as true.
+    // make all the blocks as true.
     for (int i = 2; i <= n; i++) 
     { 
         prime[i] = true; 
@@ -18,7 +18,7 @@ void sieve_of_eratosthenes(int n)
         // check if the current index is a prime number, if yes, then 
         if(prime[j] == true)
         {
-            //if yes, then make all the cless that are multiple of that index as false
+            //if yes, then make all the blocks that are multiple of that index as false
             for(int i = j*2; i <= n; i += j)
             {
                 prime[i] = false;
